@@ -1,4 +1,4 @@
-Gulp + Webpack Common Template <sup>1.0.0</sup>
+Gulp + Webpack Common Template <sup>1.0.1</sup>
 -------
 ## Get started:
 ```sh
@@ -6,7 +6,10 @@ git clone https://github.com/WahaWaher/gulp-webpack-common-template.git
 cd gulp-webpack-common-template
 npm i
 
-npm run dev // start development
-npm run build // build production
-npm run gulp <task> // run gulp task
+# Start development
+npm run dev
+# Build production
+npm run build
+# Run gulp task
+npm run gulp <task>
 ```

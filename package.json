@@ -1,6 +1,6 @@
 {
   "name": "gulp-webpack-common-template",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Gulp + Webpack Common Template",
   "scripts": {
     "dev": "gulp dev --env=development",
