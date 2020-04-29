@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <title>Gulp + Webpack &#8212; Common Template</title>
+  <title>Laize &#8212; Натяжные потолки</title>
 
   <meta name="description" content="description">
   <meta name="keywords" content="key, words">
@@ -19,30 +20,864 @@
   <link rel="stylesheet" href="css/app.css">
   <!-- endbuild -->
 </head>
+
 <body>
+  <!-- Section : app-header : Start -->
+  <header class="app-header text-white">
+    <div class="container">
+      <div class="app-header__wrap d-flex justify-content-between align-items-center">
+        <div class="app-header__item app-header__logo flex-grow-1">
 
-  <div class="container">
-    <h1>Gulp + Webpack Common Template</h1>
-    <p>Lorem ipsum dolor sit <strong>amet consectetur adipisicing elit</strong>. Nobis officia, quaerat in <em>reiciendis aperiam quis totam</em> incidunt tempore iste omnis dolorem? Dolore quasi harum excepturi aspernatur molestias non porro praesentium!</p>
-  </div>
+          <!-- Block: main-logo -->
+          <div class="main-logo">
+            <a class="main-logo__link" href="/">
+              <img class="main-logo__img" src="svg/logo.svg" alt="logo">
+            </a>
+          </div>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <p><strong>1.</strong> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis corporis mollitia quo distinctio sequi ipsa quisquam impedit eveniet sapiente nam cupiditate tempora sed, doloribus natus tenetur porro earum debitis voluptatum.</p>
+        </div>
+        <div data-depth="0.5" class="app-header__item app-header__address">
+
+          <!-- Block: main-address -->
+          <span class="main-address">г. Тольятти и СО</span>
+
+        </div>
+        <div class="app-header__item app-header__phone mx-xl-5">
+
+          <!-- Block: main-phone -->
+          <a class="main-phone" href="tel:+99999999999" title="Позвонить: +9 999 999 9999">+9 999 999 9999</a>
+
+        </div>
+        <div class="app-header__item app-header__item_lined app-header__actions z-10">
+
+          <!-- Block: btn -->
+          <a data-src="#wp-popup-dark" href="#wp-popup-dark" class="btn btn_white btn_action-special" data-fancybox>Заказать звонок</a>
+
+        </div>
+        <div class="app-header__item app-header__hamburger z-20">
+
+          <!-- Block: hamburger (vendor) -->
+          <div class="app-main-menu-hamburger hamburger hamburger--slider d-flex pos-relative">
+            <div class="hamburger-box">
+              <div class="hamburger-inner"></div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Block: main-menu-header -->
+        <nav class="main-menu-header" data-main-menu>
+          <ul class="main-menu-header__list">
+            <li><a class="scroll-to" href="#calculator">Калькулятор</a></li>
+            <li><a class="scroll-to" href="#works">Наши работы</a></li>
+            <li><a class="scroll-to" href="#kinds">Виды потолков</a></li>
+            <li><a class="scroll-to" href="#about">О нас</a></li>
+            <li><a class="scroll-to" href="#reviews">Отзывы</a></li>
+            <li><a class="scroll-to" href="#contacts">Контакты</a></li>
+          </ul>
+        </nav>
+
       </div>
-      <div class="col-md-4">
-        <p><strong>2.</strong> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis corporis mollitia quo distinctio sequi ipsa quisquam impedit eveniet sapiente nam cupiditate tempora sed, doloribus natus tenetur porro earum debitis voluptatum.</p>
+    </div>
+  </header>
+  <!-- Section : app-header : End -->
+
+  <!-- Section : main-screen : Start -->
+  <section class="sct sct-main-screen text-white" style="background-color: #8e7460;">
+    <div class="sct__bg">
+      <div class="parallax"
+        data-parallax-image="img/bg_main-screen.jpg"
+      ></div>
+    </div>
+
+    <div class="sct__wavy-wrap d-flex justify-content-center flex-column">
+
+      <div class="sct-main-screen__content">
+        <div class="container">
+          <h1 id="scene" class="title-spec title-spec-1 mb-5">
+            <span data-depth="0.1" class="title-spec__dec text-accent mb-0">Натяжные</span>
+            <span data-depth="0.2" class="title-spec__reg">ПОТОЛКИ</span>
+          </h1>
+          <a data-src="#wp-popup-dark" href="#wp-popup-dark" class="btn btn_primary btn_lines btn_md" data-fancybox>Заказать замер</a>
+        </div>
       </div>
-      <div class="col-md-4">
-        <p><strong>3.</strong> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis corporis mollitia quo distinctio sequi ipsa quisquam impedit eveniet sapiente nam cupiditate tempora sed, doloribus natus tenetur porro earum debitis voluptatum.</p>
+
+    </div>
+    <div class="wave wave_bottom wave_white" style="margin-bottom: -9.5%">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 676 119">
+        <path d="M.002.001c.688.844 7.215 4.094 17.099 9.061 17.094 8.591 32.069 14.768 49.212 20.302 11.156 3.601 16.434 5.022 30.339 8.171 44.45 10.067 92.545 12.107 153.458 6.51 15.376-1.413 53.248-5.937 85.545-10.219 41.698-5.529 62.522-7.815 87.14-9.566 12.247-.871 15.159-.953 33.69-.949 18.781.004 21.161.074 32.103.947 33.256 2.654 63.829 9.521 88.194 19.811 34.685 14.648 66.208 37.505 93.94 68.118 2.658 2.934 5.65 6.559 5.65 6.559l-676.37-.001c.007-39.556 0-118.744 0-118.744z" /></svg>
+    </div>
+  </section>
+  <!-- Section : main-screen : End -->
+
+  <!-- Section : sct-master-call : Start -->
+  <section class="sct sct-master-call">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-lg-8 col-xl-7 order-lg-2">
+
+          <div class="form-master-call sct-master-call__form-master-call">
+            <h2 class="title-2 sct-master-call__title text-upper ls-0"><b class="d-block text-primary">Бесплатно</b>Вызов мастера</h2>
+            <form>
+              <div class="row">
+                <div class="col-12 col-sm-6 col-md mb-3 mb-md-0">
+                  <input class="text-field text-field_wide" type="text" placeholder="Ваше имя">
+                </div>
+                <div class="col-12 col-sm-6 col-md mb-3 mb-md-0">
+                  <input class="text-field text-field_wide" type="text" placeholder="Ваш телефон">
+                </div>
+                <div class="col-12 col-sm-12 col-md flex-grow-0">
+                  <button data-src="#wp-popup-sent" class="btn btn_primary btn_lines btn_lines_accent" type="submit" data-fancybox>Заказать</button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+        </div>
+        <div class="col-12 col-lg-4 col-xl-5 order-lg-1">
+
+          <div class="img-tape sct-master-call__img-tape">
+            <img data-lazy-img class="img-tape__img preloader-blue" data-src="img/img_tape.png" src="img/bg-lazy.png" alt="tape">
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section : sct-master-call : End -->
+
+
+  <div data-lazy-bg class="sct bg_cover bg_fixed bg_center text-white" data-src="img/bg_room-blur.jpg" style="background-color: #3d3936;">
+    <div class="wave wave_top wave_white" style="margin-bottom: -12.5%">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 677 179">
+        <path d="M676.698 179.117s-27.522-27.432-42.229-40.933c-68.95-63.296-129.691-103.137-185.358-121.579-49.903-16.532-96.848-20.525-148.721-12.648-23.413 3.555-48.965 9.942-75.318 18.827-22.195 7.483-29.534 10.322-97.543 37.731-56.675 22.842-87.993 31.749-118.004 33.564-4.036.457-9.525.617-9.525.617v-95.001l677.333.117.001 180.007s-.26-.339-.637-.702z" />
+      </svg>
+      <div class="wave__curve" style="top: 12px">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 423" stroke="#c6aa96" stroke-width="3" fill="none">
+          <path d="M1920.141 422.435c-166.29-95.36-217-130.76-330.15-200.84-113.49-69.77-206.59-128-300.9-165.14-194.992-66.883-377.576-67.825-559.54-29.08-185 40.25-351.66 103-501.14 130.73-106.08 19.82-196.27 15.41-228.27 12.39" />
+        </svg>
+      </div>
+    </div>
+    <div class="sct__wavy-wrap">
+
+      <!-- Section : calc-online : Start -->
+      <section id="calculator" class="sct sct-calc-online">
+        <div class="container">
+          <h3 class="title-spec title-spec-3 mb-4">
+            <span class="title-spec__dec text-accent" style="letter-spacing: 0.142em;">Калькулятор Online</span>
+            <span class="title-spec__reg" style="letter-spacing: 0.02em;">Рассчитать примерную<br> стоимость</span>
+          </h3>
+          <!-- Module : calc-online Start -->
+          <div class="calc-online" data-calc="{}">
+            <div class="row">
+              <div class="col-xl-8 col-xxl-7 d-flex mb-5 mb-lg-0">
+
+                <div class="calc-online__form">
+                  <form>
+                    <div class="row no-gutters mx-n2 font-accent">
+                      <div class="col-md-6 p-2">
+                        <input data-calc-square type="text" required class="text-field text-field_wide" placeholder="Площать, м2" title="Площать, м2">
+                      </div>
+                      <div class="col-md-6 p-2">
+                        <input data-calc-lamps type="text" class="text-field text-field_wide" placeholder="Кол-во светильников" title="Кол-во светильников">
+                      </div>
+                      <div class="col-md-6 p-2">
+                        <input data-calc-corners type="text" class="text-field text-field_wide" placeholder="Кол-во углов" title="Кол-во углов">
+                      </div>
+                      <div class="col-md-6 p-2">
+                        <select class="select-input select-input_wide" data-calc-material>
+                        </select>
+                      </div>
+                      <div class="col mt-3 text-center">
+                        <span class="font-accent">Расчитать</span>
+                        <button data-calc-calculate class="btn btn-circle btn-circle_dark mx-3" onclick="return false">
+                          <svg class="svg-icon">
+                            <use xlink:href="svg/app-sprite.svg#arrows-slim-right"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+
+              </div>
+              <div class="col-xl-4 col-xxl-3 d-flex">
+
+                <div class="calc-online__result d-flex flex-column align-content-center">
+                  <div class="calc-online__title">Итого</div>
+                  <div class="calc-online__subtitle">Стоимость вашего потолка</div>
+                  <div class="calc-online__sum flex-grow-1 my-4">
+                    <span data-calc-result>—</span>
+                    <!-- <span>руб.</span> -->
+                  </div>
+                  <div class="calc-online__actions">
+                    <button data-src="#wp-popup-dark" class="btn btn_primary btn_sm" data-fancybox>Заказать звонок</button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <!-- Module : calc-online End -->
+        </div>
+      </section>
+      <!-- Section : calc-online : End -->
+
+      <!-- Section : sct-works-list : Start -->
+      <section id="works" class="sct sct-works-list">
+        <div class="container">
+
+          <div class="row">
+            <div class="col offset-xl-3">
+              <h2 class="title-spec title-spec-2 mb-5">
+                <span class="title-spec__dec text-accent mb-0" style="letter-spacing: 0.04em;">Работы</span>
+                <span class="title-spec__reg">Потолки наших клиентов</span>
+              </h2>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-9">
+
+              <div data-gallery-main="works-gallery" class="gallery-main gallery-main_works mb-4 mb-lg-0">
+                <div class="owl-carousel"></div>
+                <div class="text-right">
+                  <button data-src="#wp-popup-dark" class="btn btn_accent btn_rounded_bottom btn_want-same" data-fancybox>Хочу также</button>
+                </div>
+              </div>
+
+            </div>
+            <div class="col-lg-3 d-flex align-items-center justify-content-lg-end text-right">
+
+              <nav data-switch-menu data-gallery-main-nav="works-gallery" class="switch-menu switch-menu_works d-inline-block" style="max-width: 250px">
+                <ul class="switch-menu__list ">
+                  <li class="active">
+                    <a href="#" data-images='[
+                      "img/gallery-works/01.jpg",
+                      "img/gallery-works/02.jpg",
+                      "img/gallery-works/03.jpg"
+                    ]'>Одноуровневые</a>
+                  </li>
+                  <li>
+                    <a href="#" data-images='[
+                    "img/gallery-works/06.jpg",
+                    "img/gallery-works/05.jpg",
+                    "img/gallery-works/04.jpg"
+                  ]'>Многоуровневые</a>
+                  </li>
+                  <li>
+                    <a href="#" data-images='[
+                    "img/gallery-works/07.jpg",
+                    "img/gallery-works/08.jpg",
+                    "img/gallery-works/09.jpg"
+                  ]'>Резные</a>
+                  </li>
+                  <li>
+                    <a href="#" data-images='[
+                    "img/gallery-works/03.jpg",
+                    "img/gallery-works/01.jpg",
+                    "img/gallery-works/02.jpg"
+                  ]'>Парящие</a>
+                  </li>
+                  <li>
+                    <a href="#" data-images='[
+                    "img/gallery-works/10.jpg",
+                    "img/gallery-works/06.jpg",
+                    "img/gallery-works/05.jpg"
+                  ]'>Бесщелевые</a>
+                  </li>
+                </ul>
+              </nav>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+      <!-- Section : sct-works-list : End -->
+
+    </div>
+    <div class="wave wave_bottom wave_white">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 676 29">
+        <path d="M0 29.229l.001-25.179 1.499-.059c.825-.032 5.309-.386 9.966-.786 26.711-2.295 49.942-3.205 81.844-3.205 61.012 0 112.581 3.547 223.309 15.358 72.218 7.704 103.678 10.439 141.64 12.315 33.621 1.662 71.605 1.729 99.66.177 32.589-1.803 64.56-5.938 92.95-12.022 6.993-1.447 22.318-5.366 25.503-6.651l.002 20.052z" />
+      </svg>
+      <div class="wave__curve" style="top: -50%">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 206" fill="none" stroke="#c6aa96" stroke-width="3">
+          <path d="M1920.39 120.59c-371 153.3-606.16 65.68-887.12-17.87-293.42-88.57-502.1-164.83-1032.88-20.81" />
+        </svg>
       </div>
     </div>
   </div>
 
+  <!-- Section : sct-discouts : Start -->
+  <div class="sct sct-discouts">
+    <div class="container">
+
+      <div class="slider-discounts" data-slider-discounts="discounts">
+        <div class="slider-discounts__bg-wrap">
+          <img data-lazy-img class="slider-discounts__bg-img" data-src="img/discounts/bg-discounts.jpg" src="img/bg-lazy.png" alt="img">
+        </div>
+        <div class="owl-carousel slider-discounts__slider">
+
+          <!-- Item -->
+          <div class="slider-discounts__item">
+            <div class="row d-flex align-items-center">
+              <div class="col-lg-6 mb-5 mb-lg-0">
+                <div class="slider-discounts__img-wrap">
+                  <img class="slider-discounts__img" src="img/discounts/img-discount-01.png" alt="discount">
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="slider-discounts__content">
+                  <h3 class="slider-discounts__title">Акция</h3>
+                  <div class="slider-discounts__descr">
+                    <p>При заказе двух потолков третий потолок по площади вы получите в подарок</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item -->
+          <div class="slider-discounts__item">
+            <div class="row d-flex align-items-center">
+              <div class="col-lg-6 mb-5 mb-lg-0">
+                <div class="slider-discounts__img-wrap">
+                  <img class="slider-discounts__img" src="img/discounts/img-discount-01.png" alt="discount">
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="slider-discounts__content">
+                  <h3 class="slider-discounts__title">Акция</h3>
+                  <div class="slider-discounts__descr">
+                    <p>При заказе двух потолков третий потолок по площади вы получите в подарок</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="slider-controls sct-discouts__slider-controls">
+        <div class="slider-controls__nav" data-slider-discounts-nav="discounts"></div>
+        <div class="slider-controls__dots" data-slider-discounts-dots="discounts"></div>
+      </div>
+
+    </div>
+  </div>
+  <!-- Section : sct-discouts : End -->
+
+  <!-- Section : sct-works-list : Start -->
+  <section id="kinds" class="sct sct-kinds">
+    <div class="container">
+
+      <h2 class="title-2 text-center sct-works-list__title-2">Виды натяхных потолков для<br> любых интерьеров</h2>
+
+      <div class="cards-photos mt-5">
+        <div class="row cards-photos__wrap cards-photos__wrap_shifts">
+          <div class="col-12 col-sm-6 col-lg-4 cards-photos__wrap-item">
+
+            <div class="cards-photos__item">
+              <h3 class="cards-photos__title">
+                Глянцевые
+              </h3>
+              <div class="cards-photos__img-wrap" data-fancybox-trigger="glr-glyancevie">
+                <img data-lazy-img data-src="img/ceiling-kinds/01.jpg" src="img/bg-lazy.png" alt="photo" class="cards-photos__img preloader-blue">
+              </div>
+
+              <div class="cards-photos__gallery d-none">
+                <a href="img/ceiling-kinds/01.jpg" data-fancybox="glr-glyancevie"></a>
+                <a href="img/ceiling-kinds/02.jpg" data-fancybox="glr-glyancevie"></a>
+                <a href="img/ceiling-kinds/03.jpg" data-fancybox="glr-glyancevie"></a>
+                <a href="img/ceiling-kinds/04.jpg" data-fancybox="glr-glyancevie"></a>
+                <a href="img/ceiling-kinds/05.jpg" data-fancybox="glr-glyancevie"></a>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 cards-photos__wrap-item">
+
+            <div class="cards-photos__item">
+              <h3 class="cards-photos__title">
+                Матовые
+              </h3>
+              <div class="cards-photos__img-wrap" data-fancybox-trigger="glr-matovie">
+                <img data-lazy-img data-src="img/ceiling-kinds/02.jpg" src="img/bg-lazy.png" alt="photo" class="cards-photos__img preloader-blue">
+              </div>
+              <div class="cards-photos__gallery d-none">
+                <a href="img/ceiling-kinds/01.jpg" data-fancybox="glr-matovie"></a>
+                <a href="img/ceiling-kinds/02.jpg" data-fancybox="glr-matovie"></a>
+                <a href="img/ceiling-kinds/03.jpg" data-fancybox="glr-matovie"></a>
+                <a href="img/ceiling-kinds/04.jpg" data-fancybox="glr-matovie"></a>
+                <a href="img/ceiling-kinds/05.jpg" data-fancybox="glr-matovie"></a>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 cards-photos__wrap-item">
+
+            <div class="cards-photos__item">
+              <h3 class="cards-photos__title">
+                Сатиновые
+              </h3>
+              <div class="cards-photos__img-wrap" data-fancybox-trigger="glr-satinovie">
+                <img data-lazy-img data-src="img/ceiling-kinds/03.jpg" src="img/bg-lazy.png" alt="photo" class="cards-photos__img preloader-blue">
+              </div>
+              <div class="cards-photos__gallery d-none">
+                <a href="img/ceiling-kinds/05.jpg" data-fancybox="glr-satinovie"></a>
+                <a href="img/ceiling-kinds/01.jpg" data-fancybox="glr-satinovie"></a>
+                <a href="img/ceiling-kinds/02.jpg" data-fancybox="glr-satinovie"></a>
+                <a href="img/ceiling-kinds/03.jpg" data-fancybox="glr-satinovie"></a>
+                <a href="img/ceiling-kinds/04.jpg" data-fancybox="glr-satinovie"></a>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 cards-photos__wrap-item">
+
+            <div class="cards-photos__item">
+              <h3 class="cards-photos__title">
+                Тканевые
+              </h3>
+              <div class="cards-photos__img-wrap" data-fancybox-trigger="glr-tranevie">
+                <img data-lazy-img data-src="img/ceiling-kinds/04.jpg" src="img/bg-lazy.png" alt="photo" class="cards-photos__img preloader-blue">
+              </div>
+              <div class="cards-photos__gallery d-none">
+                <a href="img/ceiling-kinds/05.jpg" data-fancybox="glr-tranevie"></a>
+                <a href="img/ceiling-kinds/01.jpg" data-fancybox="glr-tranevie"></a>
+                <a href="img/ceiling-kinds/02.jpg" data-fancybox="glr-tranevie"></a>
+                <a href="img/ceiling-kinds/03.jpg" data-fancybox="glr-tranevie"></a>
+                <a href="img/ceiling-kinds/04.jpg" data-fancybox="glr-tranevie"></a>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 cards-photos__wrap-item">
+
+            <div class="cards-photos__item">
+              <h3 class="cards-photos__title">
+                Полупрозрачные
+              </h3>
+              <div class="cards-photos__img-wrap" data-fancybox-trigger="glr-poluprozrachnie">
+                <img data-lazy-img data-src="img/ceiling-kinds/05.jpg" src="img/bg-lazy.png" alt="photo" class="cards-photos__img preloader-blue">
+              </div>
+              <div class="cards-photos__gallery d-none">
+                <a href="img/ceiling-kinds/05.jpg" data-fancybox="glr-poluprozrachnie"></a>
+                <a href="img/ceiling-kinds/01.jpg" data-fancybox="glr-poluprozrachnie"></a>
+                <a href="img/ceiling-kinds/02.jpg" data-fancybox="glr-poluprozrachnie"></a>
+                <a href="img/ceiling-kinds/03.jpg" data-fancybox="glr-poluprozrachnie"></a>
+                <a href="img/ceiling-kinds/04.jpg" data-fancybox="glr-poluprozrachnie"></a>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 cards-photos__wrap-item">
+
+            <div class="cards-photos__item">
+              <h3 class="cards-photos__title">
+                Tекстурные
+              </h3>
+              <div class="cards-photos__img-wrap" data-fancybox-trigger="glr-texturnie">
+                <img data-lazy-img data-src="img/ceiling-kinds/06.jpg" src="img/bg-lazy.png" alt="photo" class="cards-photos__img preloader-blue">
+              </div>
+              <div class="cards-photos__gallery d-none">
+                <a href="img/ceiling-kinds/05.jpg" data-fancybox="glr-texturnie"></a>
+                <a href="img/ceiling-kinds/01.jpg" data-fancybox="glr-texturnie"></a>
+                <a href="img/ceiling-kinds/02.jpg" data-fancybox="glr-texturnie"></a>
+                <a href="img/ceiling-kinds/03.jpg" data-fancybox="glr-texturnie"></a>
+                <a href="img/ceiling-kinds/04.jpg" data-fancybox="glr-texturnie"></a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- Section : sct-works-list : End -->
+
+  <!-- Section : sct-reasons : Start -->
+  <section id="about" class="sct sct-reasons">
+    <div class="container">
+
+      <div class="row">
+        <div class="col offset-xl-3">
+          <h2 class="title-spec title-spec-2">
+            <span class="title-spec__dec text-primary mb-0" style="letter-spacing: 0.04em;">6 причин</span>
+            <span class="title-spec__reg" style="margin-left: 3em;">Работать с нами</span>
+          </h2>
+        </div>
+      </div>
+
+      <div class="figure-blocks sct-reasons__figure-blocks mt-4">
+        <div class="row">
+          <div class="col-sm-6 col-lg-4 my-4">
+
+            <figure class="figure-blocks__item">
+              <div class="figure-blocks__num">01.</div>
+              <figcaption>
+                <h3 class="figure-blocks__title">
+                  Гарантия качества
+                </h3>
+                <div class="figure-blocks__content">
+                  10 лет гарантии на полотно<br> 3 года на монтаж
+                </div>
+              </figcaption>
+            </figure>
+
+          </div>
+          <div class="col-sm-6 col-lg-4 my-4">
+
+            <figure class="figure-blocks__item">
+              <div class="figure-blocks__num">02.</div>
+              <figcaption>
+                <h3 class="figure-blocks__title">Профессионализм</h3>
+                <div class="figure-blocks__content">
+                  Монтажники граждане РФ<br> с опытом работы от 5 лет
+                </div>
+              </figcaption>
+            </figure>
+
+          </div>
+          <div class="col-sm-6 col-lg-4 my-4">
+
+            <figure class="figure-blocks__item">
+              <div class="figure-blocks__num">03.</div>
+              <figcaption>
+                <h3 class="figure-blocks__title">Безопасность</h3>
+                <div class="figure-blocks__content">
+                  Взрывобезопасные газовые<br> баллоны
+                </div>
+              </figcaption>
+            </figure>
+
+          </div>
+          <div class="col-sm-6 col-lg-4 my-4">
+
+            <figure class="figure-blocks__item">
+              <div class="figure-blocks__num">04.</div>
+              <figcaption>
+                <h3 class="figure-blocks__title">Экологичность</h3>
+                <div class="figure-blocks__content">
+                  Только сертифицированные<br> материалы
+                </div>
+              </figcaption>
+            </figure>
+
+          </div>
+          <div class="col-sm-6 col-lg-4 my-4">
+
+            <figure class="figure-blocks__item">
+              <div class="figure-blocks__num">05.</div>
+              <figcaption>
+                <h3 class="figure-blocks__title">Собственное производство</h3>
+                <div class="figure-blocks__content">
+                  Мы являемся прямыми<br> производителями
+                </div>
+              </figcaption>
+            </figure>
+
+          </div>
+          <div class="col-sm-6 col-lg-4 my-4">
+
+            <figure class="figure-blocks__item">
+              <div class="figure-blocks__num">06.</div>
+              <figcaption>
+                <h3 class="figure-blocks__title">Удобство и выгода</h3>
+                <div class="figure-blocks__content">
+                  Беспроцентная рассрочка<br> до 3-х месяцев
+                </div>
+              </figcaption>
+            </figure>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- Section : sct-reasons : End -->
+
+  <!-- Section : sct-reviews : Start -->
+  <section id="reviews" class="sct sct-reviews">
+    <div class="container">
+
+      <div class="slider-reviews slider-reviews_connected" data-slider-reviews="reviews">
+        <div class="row">
+          <div class="col-xl-5 order-xl-2">
+
+            <h2 class="title-spec title-spec-3 mb-5 mb-xl-0">
+              <span class="title-spec__dec text-primary mb-0" style="letter-spacing: 0.142em;">Отзывы</span>
+              <span class="title-spec__reg" style="margin-left: 1.6em; letter-spacing: 0.07em;">Доказывают наш<br> профессионализм</span>
+            </h2>
+
+          </div>
+          <div class="col-lg-10 offset-lg-1 col-xl-7 offset-xl-0 order-xl-1">
+
+            <div class="slider-reviews__photos-wrapper">
+              <!-- PhotosSlider -->
+              <div class="owl-carousel slider-reviews__photos" data-slider-reviews-photos="reviews">
+                <!-- PhotoItem -->
+                <div class="slider-reviews__p-item">
+                  <img data-src="img/gallery-works/06.jpg" src="img/bg-lazy.png" alt="photo" class="slider-reviews__p-img owl-lazy">
+                </div>
+                <!-- PhotoItem -->
+                <div class="slider-reviews__p-item">
+                  <img data-src="img/gallery-works/07.jpg" src="img/bg-lazy.png" alt="photo" class="slider-reviews__p-img owl-lazy">
+                </div>
+                <!-- PhotoItem -->
+                <div class="slider-reviews__p-item">
+                  <img data-src="img/gallery-works/08.jpg" src="img/bg-lazy.png" alt="photo" class="slider-reviews__p-img owl-lazy">
+                </div>
+                <!-- PhotoItem -->
+              </div>
+
+              <div class="slider-reviews__p-substrate" data-slider-reviews-substrate="reviews">
+                <img class="slider-reviews__p-substrate-img" src="img/ceiling-kinds/01.jpg" alt="img">
+              </div>
+            </div>
+
+          </div>
+          <div class="col-xl-9 offset-xl-3 order-xl-3">
+
+            <!-- TextsSlider -->
+            <div class="slider-reviews__texts-wrapper">
+
+              <div class="row">
+                <div class="col-xl-4">
+                  <!-- ControlsSlider -->
+                  <div class="slider-reviews__controls text-center" data-slider-reviews-controls="reviews">
+                    <div class="counter-deco d-inline-block" data-counter>
+                      <span class="counter-deco__cur" data-current></span>
+                      <span class="counter-deco__sep">/</span>
+                      <span class="counter-deco__all" data-all></span>
+                    </div>
+
+                    <div data-nav>
+                      <button class="btn btn_circle btn_transparent text-primary slider-reviews__prev" data-prev>
+                        <svg class="btn__icon">
+                          <use xlink:href="svg/app-sprite.svg#arrows-slim-left"></use>
+                        </svg>
+                      </button>
+                      <button class="btn btn_circle btn_transparent text-primary slider-reviews__next" data-next>
+                        <svg class="btn__icon">
+                          <use xlink:href="svg/app-sprite.svg#arrows-slim-right"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-8">
+
+                  <div class="owl-carousel slider-reviews__texts" data-slider-reviews-texts="reviews">
+                    <!-- TextItem -->
+                    <div class="slider-reviews__t-item">
+                      <h3 class="slider-reviews__t-title">1. Светлана Борискевич</h3>
+                      <div class="slider-reviews__t-subtitle">24.11.2019</div>
+                      <div class="slider-reviews__t-content">Заказывала уборка по очень настойчивой рекомендации своих друзей) и осталась очень довольна! Все вовремя, быстро, профессионально.</div>
+                    </div>
+                    <!-- TextItem -->
+                    <div class="slider-reviews__t-item">
+                      <h3 class="slider-reviews__t-title">2. Светлана Борискевич</h3>
+                      <div class="slider-reviews__t-subtitle">24.11.2019</div>
+                      <div class="slider-reviews__t-content">Заказывала уборка по очень настойчивой рекомендации своих друзей) и осталась очень довольна! Все вовремя, быстро, профессионально.</div>
+                    </div>
+                    <!-- TextItem -->
+                    <div class="slider-reviews__t-item">
+                      <h3 class="slider-reviews__t-title">3. Светлана Борискевич</h3>
+                      <div class="slider-reviews__t-subtitle">24.11.2019</div>
+                      <div class="slider-reviews__t-content">Заказывала уборка по очень настойчивой рекомендации своих друзей) и осталась очень довольна! Все вовремя, быстро, профессионально.</div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- Section : sct-reviews : End -->
+
+  <div data-lazy-bg class="sct bg_cover bg_fixed bg_bottom-center text-white" data-src="img/bg_room-darken.jpg" style="background-color: #8f7c66;">
+    <div class="wave wave_top wave_white">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 677 90">
+        <path d="M560.564 90.504c-26.778-.989-53.491-6.069-83.359-15.855-19.849-6.503-33.549-11.884-73.98-29.06-36.389-15.458-49.921-20.773-69.674-27.364-37.879-12.639-69.034-18.146-102.658-18.144-27.228.001-53.284 3.784-81.193 11.788-44.996 12.904-94.197 37.755-144.144 72.805l-5.556 3.899v-89.484h677.333v67.598l-4.322 1.826c-36.828 15.558-76.509 23.319-112.448 21.992z" />
+      </svg>
+      <div class="wave__curve" style="top: 60px">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1922 251" stroke="#8b7667" stroke-width="4" fill="none">
+          <path d="M1921.261 163.497c-164.764 81.057-331.99 89.949-521.43 83.95-201.57-16.49-384.81-83.71-564.74-140.93-183.366-58.251-369.608-109.751-550.84-104.09-92.16 4.25-200.66 19.2-283 85.2" />
+        </svg>
+      </div>
+    </div>
+    <div class="sct__wavy-wrap">
+
+      <!-- Section : sct-contacts : Start -->
+      <section id="contacts" class="sct sct-contacts">
+        <div class="container">
+          <h2 class="title-2 text-center mb-5">Контакты</h2>
+
+          <div class="row">
+            <div class="col-md-5 col-lg-6">
+
+              <div class="row">
+                <div class="col-sm-6 col-md-12 col-xl-6">
+
+                  <div class="i-block sct-contacts__i-block mb-5">
+                    <div class="i-block__title">
+                      <span class="i-block__icon">
+                        <svg class="svg-icon">
+                          <use xlink:href="svg/app-sprite.svg#phone"></use>
+                        </svg>
+                      </span>
+                      <span class="i-block__text">Телефон</span>
+                    </div>
+                    <span class="i-block__value">
+                      <a class="no-br" href="tel:79166940672" title="Позвонить">+7 916 694 0672</a>
+                    </span>
+                  </div>
+
+                  <div class="i-block sct-contacts__i-block mb-5">
+                    <div class="i-block__title">
+                      <span class="i-block__icon">
+                        <svg class="svg-icon">
+                          <use xlink:href="svg/app-sprite.svg#map"></use>
+                        </svg>
+                      </span>
+                      <span class="i-block__text">Адрес</span>
+                    </div>
+                    <span class="i-block__value">
+                      <span>г. Тольятти ул. Название 42</span>
+                    </span>
+                  </div>
+
+                </div>
+                <div class="col-sm-6 col-md-12 col-xl-6">
+
+                  <div class="i-block sct-contacts__i-block mb-5">
+                    <div class="i-block__title">
+                      <span class="i-block__icon">
+                        <svg class="svg-icon">
+                          <use xlink:href="svg/app-sprite.svg#email"></use>
+                        </svg>
+                      </span>
+                      <span class="i-block__text">Почта</span>
+                    </div>
+                    <span class="i-block__value">
+                      <a href="mailto:jkolesnik@mail.ru" title="Написать">jkolesnik@mail.ru</a>
+                    </span>
+                  </div>
+
+                  <!-- Block: Socials -->
+                  <ul class="socials sct-contacts__socials list-clear mb-5">
+                    <li>
+                      <a href="javascript:void(0)" title="Instagram">
+                        <svg class="svg-icon">
+                          <use xlink:href="svg/app-sprite.svg#instagram"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)" title="Facebook">
+                        <svg class="svg-icon">
+                          <use xlink:href="svg/app-sprite.svg#facebook"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+
+            </div>
+            <div class="col-md-7 col-lg-6">
+
+              <!-- Block: form-default -->
+              <div class="form-default sct-contacts__form-default">
+                <div class="form-default__title text-center">Получить бесплатную</div>
+                <div class="form-default__subtitle text-center mb-5">Консультацию дизайнера</div>
+                <form>
+                  <input type="text" class="text-field-slim text-field-slim_wide mb-4" placeholder="Ваше имя">
+                  <input type="text" class="text-field-slim text-field-slim_wide mb-4" placeholder="Ваш телефон">
+                  <button data-src="#wp-popup-sent" class="btn btn_primary btn_wide mt-5" data-fancybox>Заказать замер</button>
+                </form>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+      <!-- Section : sct-contacts : End -->
+
+      <footer class="sct app-footer">
+        <div class="container">
+          <div class="row d-flex justify-content-between align-items-center">
+            <div class="col-12 mb-3 d-none d-lg-block col-lg">
+
+              <!-- Block: main-logo -->
+              <div class="main-logo">
+                <a class="main-logo__link" href="javascript:void(0)">
+                  <img class="main-logo__img" src="svg/logo.svg" alt="logo">
+                </a>
+              </div>
+
+            </div>
+            <div class="col-12 mb-3 col-lg flex-grow-xl-0 mx-xl-5 text-center">
+
+              <!-- Block: main-address -->
+              <span class="main-address">г. Тольятти и СО</span>
+
+            </div>
+            <div class="col-12 mb-3 col-lg flex-grow-xl-0 mx-xl-5 text-center">
+
+              <!-- Block: main-phone -->
+              <a class="main-phone" href="tel:99999999999" title="Позвонить: +9 999 999 9999">+9 999 999 9999</a>
+
+            </div>
+            <div class="col-12 mb-3 col-lg d-none d-lg-block flex-grow-0">
+
+              <!-- Block: btn -->
+              <a data-src="#wp-popup-dark" href="#wp-popup-dark" class="btn btn_white btn_action-special no-br" data-fancybox>Заказать звонок</a>
+
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+  </div>
+
+  <div id="top-button"></div>
+
+  <!-- Form Order -->
+  <div id="wp-popup-dark" class="modal-theme-dark animate-from-up">
+    <div class="form-default form-default_size_slim">
+      <div class="form-default__title text-center">Заказать замер</div>
+      <div class="form-default__subtitle text-center mb-5">И узнать стоимость потолка</div>
+      <form>
+        <input type="text" class="text-field-slim text-field-slim_wide mb-4" placeholder="Ваше имя">
+        <input type="text" class="text-field-slim text-field-slim_wide mb-4" placeholder="Ваш телефон">
+        <button data-src="#wp-popup-sent" class="btn btn_primary btn_wide mt-5" data-fancybox>Заказать замер</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Form Sent -->
+  <div id="wp-popup-sent" class="modal-theme-dark animate-from-up">
+    <div class="title-3">Спасибо!</div>
+    <p>Ваша заявка успешно отправлена. Мы свяжемся с Вами в ближайшее время!</p>
+  </div>
+
   <!-- build:js -->
-  <script src="js/ready/vendors~app.js"></script>
-  <script src="js/ready/app.js"></script>
+  <script src="js/vendors~app.min.js"></script>
+  <script src="js/app.js"></script>
   <!-- endbuild -->
 </body>
 </html>

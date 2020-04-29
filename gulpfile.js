@@ -1,63 +1,130 @@
 const { series, parallel } = require('gulp');
 // Tasks
-const { cleanBuild, cleanCssSrc, cleanJsSrc } = require('./tasks/clean');
-const { appStyles, vendorStyles, headerStyles } = require('./tasks/styles');
-const { scriptsWebpack, scriptsNativeApp, scriptsNativeLibs } = require('./tasks/scripts');
-const { rootPagesHTML, rootPagesPHP, pages, layout } = require('./tasks/pages');
-const { images, genFavicons, genSprite, copySVG } = require('./tasks/images');
-const { copyFonts } = require('./tasks/fonts');
-const { copyRootOther } = require('./tasks/other');
+const { cleanBuild, cleanCSS, cleanJS } = require('./tasks/clean');
+const { stylesApp, stylesVendors } = require('./tasks/styles');
+const {
+  scriptsApp,
+  scriptsVendors,
+  scriptsVendorsSep,
+} = require('./tasks/scripts');
+const { rootPagesHTML, rootPagesPHP, includeHTML } = require('./tasks/pages');
+const { copyIMG, genFavicons, genSprite, copySVG } = require('./tasks/images');
+const {
+  copyFonts,
+  fontsClear,
+  fontsCollect,
+  fontsRename,
+  fontsSort,
+  fontsConvert,
+} = require('./tasks/fonts');
+const { copyRootOther, copyCustom } = require('./tasks/other');
 const { watcher } = require('./tasks/watch');
 // Configs
 const { mode, config } = require('./project.config');
+const { source, build } = config;
 
 /**
- * Development
+ * Development Live Server
+ * @cli npm run dev
  */
 exports['dev'] = series(
-  cleanCssSrc,
-  cleanJsSrc,
+  parallel(cleanCSS, cleanJS),
   parallel(
-    config.useWebpackJS ? scriptsWebpack : scriptsNativeLibs,
-    appStyles,
-    vendorStyles,
-    genSprite
+    [
+      includeHTML,
+      stylesApp,
+      stylesVendors,
+      scriptsApp,
+      scriptsVendors,
+      config[mode()].js.vendors.separate ? scriptsVendorsSep : false,
+      genSprite
+    ].filter(Boolean)
   ),
   watcher
 );
 
 /**
- * Production
+ * Production build
+ * @cli npm run prod
  */
 exports['build'] = series(
   cleanBuild,
-  parallel(
-    config.useWebpackJS
-      ? scriptsWebpack
-      : parallel(scriptsNativeLibs, scriptsNativeApp),
-    appStyles,
-    vendorStyles,
+  includeHTML,
+  parallel([
+    stylesApp,
+    stylesVendors,
+    scriptsApp,
+    scriptsVendors,
+    config[mode()].js.vendors.separate ? scriptsVendorsSep : false,
+    copyFonts,
+    copyIMG,
+    copySVG,
+    genSprite,
     rootPagesHTML,
     rootPagesPHP,
-    pages,
-    layout,
-    genSprite,
-    images,
-    copyFonts,
-    copySVG,
     copyRootOther,
-  )
+  ].filter(Boolean)),
+  watcher,
 );
 
 /**
- * Generate favicons (png, ico)
- * From: "src/img/original.png"
+ * Task: Generate favicons (png, ico)
+ * from original "${src}/img/favicon/original.png"
+ *
+ * @cli npm run gulp fav
  */
 exports['fav'] = series(genFavicons);
 
 /**
- * Generate header-styles to "src/css/header~app.min.css"
- * (normalizer, bootstrap-grid)
- * Settings: "src/scss/utils/_variables.scss"
+ * Task: Generate web fonts from .ttf
+ * from: "${src}/fonts"
+ * temp directories: "_collected", "_renamed", "_sorted", "_ready"
+ *
+ * @cli npm run gulp fonts
  */
-exports['header-styles'] = series(headerStyles);
+exports['fonts'] = series(
+  fontsClear,
+  fontsCollect,
+  fontsRename,
+  fontsSort,
+  fontsConvert
+);
+
+/**
+ * Task: Collects .ttf
+ * from "${src}/fonts" to "${src}/fonts/_collected"
+ *
+ * @cli npm run gulp fonts:collect
+ */
+exports['fonts:collect'] = series(fontsClear, fontsCollect);
+
+/**
+ * Task: Rename collected fonts
+ * from "${src}/fonts/_collected" to "${src}/fonts/_renamed"
+ *
+ * @cli npm run gulp fonts:collect
+ */
+exports['fonts:rename'] = series(fontsRename);
+
+/**
+ * Task: Sort collected and renamed fonts
+ * from "${src}/fonts/_renamed" to "${src}/fonts/_sorted"
+ *
+ * @cli npm run gulp fonts:rename
+ */
+exports['fonts:sort'] = series(fontsSort);
+
+/**
+ * Task: Convert collected, renamed and sorted fonts
+ * from "${src}/fonts/_sorted" to "${src}/fonts/_ready"
+ *
+ * @cli npm run gulp fonts:convert
+ */
+exports['fonts:convert'] = series(fontsConvert);
+
+/**
+ * Task: Include HTML
+ */
+exports['include'] = parallel(includeHTML);
+
+

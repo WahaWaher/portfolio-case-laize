@@ -1,17 +1,15 @@
 const { task } = require('gulp');
 const browserSync = require('browser-sync').create();
-const serverConfig = require('../server.config.js');
+// Configs
+const { mode, config } = require('../project.config');
+const { source, build } = config;
 
 /**
  * BrowserSync
  */
 const server = () => {
   browserSync.init({
-    ...serverConfig,
-    // BrowserSync options
-    browser: 'chrome',
-    open: false,
-    notify: false,
+    ...config[mode()].server,
   });
 };
 

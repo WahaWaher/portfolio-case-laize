@@ -1,0 +1,118 @@
+/**
+ * Align
+ */
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+// .text-upper
+
+/**
+ * Colors
+ */
+.text-white {
+  color: $white;
+}
+.text-accent {
+  color: $accent;
+}
+.text-primary {
+  color: $primary;
+}
+.ls-0 {
+  letter-spacing: 0;
+}
+.text-upper {
+  text-transform: uppercase;
+}
+.z-10 {
+  z-index: 10 !important;
+}
+.z-20 {
+  z-index: 20 !important;
+}
+.pos-relative {
+  position: relative;
+}
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  & > [class^="col-"],
+  & > [class*=" col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+.font-accent {
+  font-family: $accentFont;
+}
+.font-base {
+  font-family: $baseFont;
+}
+.font-deco {
+  font-family: $decoFont;
+}
+/**
+ * Margins, paddings
+ * 
+ */
+// .m-0  { margin: 0; }
+// .mb-0 { margin-bottom: 0; }
+// .mt-0 { margin-top: 0; }
+
+// .p-0  { padding: 0; }
+// .pb-0 { padding-bottom: 0; }
+// .pt-0 { padding-top: 0; }
+
+// Размеры текста
+// .txt-xl { font-size: 0px; }
+// .txt-lg { font-size: 0px; }
+// .txt-md { font-size: 0px; }
+// .txt-sm { font-size: 0px; }
+// .txt-xs { font-size: 0px; }
+
+/**
+ * SVG, IMG
+ * 
+ */
+.svg-icon,
+.img-icon {
+  fill: currentColor;
+  vertical-align: middle;
+}
+
+/**
+ * Other
+ * 
+ */
+.no-br {
+  white-space: nowrap;
+}
+.bg_cover {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.bg_fixed {
+  background-attachment: fixed;
+}
+.bg_center {
+  background-position: center;
+}
+.bg_top-center {
+  background-position: top center;
+}
+.bg_bottom-center {
+  background-position: bottom center;
+}
+.list-clear {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}

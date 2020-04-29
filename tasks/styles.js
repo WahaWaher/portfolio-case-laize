@@ -12,8 +12,9 @@ const mqpacker = require('css-mqpacker');
 const inlineSvg = require('postcss-inline-svg');
 const notify = require('gulp-notify');
 const plumber = require('gulp-plumber');
-// Configs, BrowserSync
+// Configs
 const { mode, config } = require('../project.config');
+const { source, build } = config;
 const { server, stream } = require('./server');
 const postcssConfig = require('../postcss.config.js');
 
@@ -22,88 +23,73 @@ sass.compiler = require('node-sass');
 /**
  * CSS: App
  */
-const appStyles = () => {
-  return src(['src/scss/app.scss'])
+const stylesApp = () => {
+  return src([
+    `${source}/scss/**/*.scss`,
+    `!${source}/scss/vendors/**/*`,
+    `!${source}/scss/vendors~app.scss`,
+  ])
     .pipe(
       plumber({ errorHandler: notify.onError('Error: <%= error.message %>') })
     )
-    .pipe(gulpif(mode.is('dev'), sourcemaps.init()))
-    .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
+    .pipe(gulpif(config[mode()].css.app.maps, sourcemaps.init()))
+    .pipe(sass({ outputStyle: 'expanded', includePaths: ['./node_modules/'] }).on('error', sass.logError))
     .pipe(cssimport({ includePaths: ['./node_modules/'] }))
-    .pipe(postcss(postcssConfig[mode()].plugins))
-    .pipe(gulpif(mode.is('dev'), sourcemaps.write()))
+    .pipe(postcss(postcssConfig('app')[mode()].plugins))
+    .pipe(gulpif(config[mode()].css.app.maps, sourcemaps.write()))
     .pipe(
       rename({
-        basename: 'app',
-        suffix: mode.is('prod') ? '.min' : '',
+        // basename: 'app',
+        suffix: config[mode()].css.app.min ? '.min' : '',
         extname: '.css',
       })
     )
     .pipe(
       dest(
         mode.is('dev')
-          ? `src/${config.development.readyCssDir}`
-          : 'build/css'
+          ? `${source}/css`
+          : `${build}/css`
       )
     )
     .pipe(gulpif(mode.is('dev'), stream()));
 };
 
 /**
- * CSS: Libs
+ * CSS: Vendors
  */
-const vendorStyles = () => {
-  return src('src/scss/vendors/vendors.scss')
+const stylesVendors = () => {
+  return src([
+    config[mode()].css.vendors.separate ? `${source}/scss/vendors/**/*.scss` : false,
+    `${source}/scss/vendors~app.scss`,
+  ].filter(Boolean))
     .pipe(
       plumber({ errorHandler: notify.onError('Error: <%= error.message %>') })
     )
-    .pipe(gulpif(mode.is('dev'), sourcemaps.init()))
-    .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
+    .pipe(gulpif(config[mode()].css.vendors.maps, sourcemaps.init()))
+    .pipe(sass({ outputStyle: 'expanded', includePaths: ['./node_modules/'] }).on('error', sass.logError))
     .pipe(cssimport({ includePaths: ['./node_modules/'] }))
-    .pipe(postcss(postcssConfig[mode()].plugins))
-    .pipe(gulpif(mode.is('dev'), sourcemaps.write()))
+    .pipe(postcss(postcssConfig('vendors')[mode()].plugins))
+    .pipe(gulpif(config[mode()].css.vendors.maps, sourcemaps.write()))
     .pipe(
-      rename({
-        basename: 'vendors~app',
-        suffix: mode.is('prod') ? '.min' : '',
-        extname: '.css',
+      rename(function (path) {
+          if (path.basename !== 'vendors~app') {
+            path.dirname += "/vendors";
+          }
+          path.basename += config[mode()].css.vendors.min ? '.min' : '';
+          path.extname = '.css';
       })
     )
     .pipe(
       dest(
         mode.is('dev')
-          ? `src/${config.development.readyCssDir}`
-          : 'build/css'
+          ? `${source}/css`
+          : `${build}/css`
       )
     )
     .pipe(gulpif(mode.is('dev'), stream()));
-};
-
-/**
- * Generate header-styles to "src/css/header~app.min.css"
- * (normalizer, bootstrap-grid)
- * Settings: "src/scss/utils/_variables.scss"
- */
-const headerStyles = () => {
-  return src('src/scss/base/header-styles.scss')
-    .pipe(
-      plumber({ errorHandler: notify.onError('Error: <%= error.message %>') })
-    )
-    .pipe(sass())
-    .pipe(cssimport({ includePaths: ['./node_modules/'] }))
-    .pipe(postcss(postcssConfig.production.plugins))
-    .pipe(
-      rename({
-        basename: 'header~app',
-        suffix: '.min',
-        extname: '.css',
-      })
-    )
-    .pipe(dest(`src/${config.development.readyCssDir}`));
 };
 
 module.exports = {
-  appStyles,
-  vendorStyles,
-  headerStyles,
+  stylesApp,
+  stylesVendors,
 };

@@ -1,32 +1,79 @@
 const config = {
+  source: 'src',
+  build: 'docs',
+
   /**
-   * Use Webpack for JS
-   * If false, third-party libraries
-   * will be imported from: "src/js/vendors.list.js"
-   * Example: "vendors.exmple.js"
+   * Development
    */
-  useWebpackJS: true,
-
   development: {
-    /**
-     * Directory for compiled JS files
-     * relative to the root dev directory
-     * (paths in html files are changed manually)
-     */
-    readyJsDir: 'js/ready',
-
-    /**
-     * Directory for compiled CSS files
-     * relative to the root dev directory
-     * (paths in html files are changed manually)
-     */
-    readyCssDir: 'css',
+    server: {
+      server: 'src',
+      port: 8000,
+      browser: 'chrome',
+      open: false,
+      notify: false,
+    },
+    css: {
+      // app styles
+      app: {
+        min: false,
+        maps: false,
+      },
+      // vendor styles
+      vendors: {
+        min: false,
+        maps: false,
+        separate: true,
+      },
+    },
+    js: {
+      // app scripts
+      app: {
+        min: false,
+      },
+      // vendor scripts
+      vendors: {
+        min: true,
+        separate: true,
+      },
+    },
   },
+
+  /**
+   * Production
+   */
   production: {
-    /**
-     * Compress images in the "img /" directory
-     */
-    compressImg: true,
+    server: {
+      // server: 'docs',
+      port: 8080,
+      browser: 'chrome',
+      open: true,
+      notify: false,
+    },
+    css: {
+      // app styles
+      app: {
+        min: true,
+        maps: false,
+      },
+      // vendor styles
+      vendors: {
+        min: true,
+        maps: false,
+        separate: false,
+      },
+    },
+    js: {
+      // app scripts
+      app: {
+        min: true,
+      },
+      // vendor scripts
+      vendors: {
+        min: true,
+        separate: false,
+      },
+    },
   },
 };
 

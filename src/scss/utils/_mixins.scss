@@ -1,16 +1,10 @@
-/**
- * App mixins
- * 
- */
-
-/**
- * Font-Face generator
- */
+// Font-Face generator
 @mixin font-face($name, $path, $weight, $style) {
   @font-face {
     font-family: "#{$name}";
     font-weight: #{$weight};
     font-style: #{$style};
+    font-display: swap;
     src: url("#{$path}.eot?#iefix")format("embedded-opentype"),
          url("#{$path}.woff2") format("woff2"),
          url("#{$path}.woff") format("woff"),
